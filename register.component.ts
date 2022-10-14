@@ -1,0 +1,28 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+  list:any[]=[];
+  addTask(item:string)
+  {
+
+    this.list.push({id:this.list.length,name:item})
+    console.warn(this.list);
+
+  }
+  removeTask(id:number)
+  {
+    console.warn(id)
+    this.list=this.list.filter(item=>item.id!==id);
+  }
+
+}

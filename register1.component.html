@@ -1,0 +1,25 @@
+
+<section class="register1">
+  <img src="../../assets/reg.jpg">
+<div class="register1content">
+  <h1 style="color:black;" >Register For Course</h1>
+  <div class="d-flex justify-content-center">
+  <input class="col-4" type="text" placeholder="Enter Name" #bo />
+    <button  #btn (keydown.enter)="EnterSubmit(bo.value,bo)" (click)="EnterSubmit(bo.value,bo)">Add</button>
+  </div>
+  <div class="d-flex flex-column mt-4 align-items-center ">
+    <h1 style="color:black">Registered Students</h1>
+  <table>
+
+    <tr>
+      <th>Name</th>
+      <th>Remove</th>
+    </tr>
+    <tr *ngFor="let item of list,index as i">
+      <td >{{item.name}} </td>
+      <td><button value="remove" (click)="remove(i)">Remove</button> </td>
+    </tr>
+  </table>
+  </div>
+</div>
+</section>
